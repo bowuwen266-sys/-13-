@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>高二（13）班期末成绩查询</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#0b1b3a,#eef3ff);}
+.top{background:#0d2b6b;color:#fff;padding:14px 18px;font-weight:700;}
+.box{width:360px;margin:80px auto;background:#fff;padding:22px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.2);}
+input{width:100%;padding:10px;margin:8px 0;border:1px solid #ddd;border-radius:8px;}
+button{width:100%;padding:10px;background:#0d2b6b;color:#fff;border:none;border-radius:8px;}
+.panel{display:none;width:850px;margin:30px auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.2);}
+.h{background:#0d2b6b;color:#fff;padding:16px;font-weight:700;}
+td{padding:12px;border-bottom:1px solid #eee;}
+.rank{color:#0d2b6b;font-weight:700;}
+</style>
+</head>
+<body>
+
+<div class="top">高二（13）班期末成绩查询系统</div>
+
+<div class="box">
+<h3>登录</h3>
+<input id="name" placeholder="姓名">
+<input id="id" placeholder="学号">
+<button onclick="login()">查询</button>
+</div>
+
+<div class="panel" id="p">
+<div class="h">成绩结果</div>
+<table width="100%">
+<tr><td>姓名</td><td>吴文博</td></tr>
+<tr><td>语文</td><td>80</td></tr>
+<tr><td>数学</td><td>112</td></tr>
+<tr><td>英语</td><td>101</td></tr>
+<tr><td>物理</td><td>67</td></tr>
+<tr><td>化学</td><td>54</td></tr>
+<tr><td>总分</td><td>471</td></tr>
+<tr><td>班级排名</td><td class="rank">3</td></tr>
+<tr><td>年级排名</td><td class="rank">86</td></tr>
+</table>
+</div>
+
+<script>
+function login(){
+let n=document.getElementById('name').value;
+let i=document.getElementById('id').value;
+if(n==="吴文博" && i==="35"){
+document.getElementById('p').style.display="block";
+}else{
+alert("验证失败");
+}
+}
+</script>
+
+</body>
+</html>
